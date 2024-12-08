@@ -3,7 +3,7 @@ import random as rd
 from random import randint
 
 class Genetique:
-    def __init__(self, num_nodes, adjacency_matrix, max_colors, pop_size=50, nbr_generations=500):
+    def __init__(self, num_nodes, adjacency_matrix, max_colors, pop_size, nbr_generations):
         self.num_nodes = num_nodes
         self.adjacency_matrix = adjacency_matrix
         self.max_colors = max_colors

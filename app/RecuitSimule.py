@@ -2,7 +2,7 @@ import random
 import numpy as np
 
 class RecuitSimule:
-    def __init__(self, num_nodes, adjacency_matrix, max_colors, temperature_initiale=1000, facteur=0.99):
+    def __init__(self, num_nodes, adjacency_matrix, max_colors, temperature_initiale, facteur, iterations, voisinages):
         self.num_nodes = num_nodes
         self.adjacency_matrix = adjacency_matrix
         self.max_colors = max_colors
@@ -11,6 +11,8 @@ class RecuitSimule:
         self.solution = [random.randint(0, max_colors - 1) for _ in range(num_nodes)]  # Solution initiale aléatoire
         self.cout_min_sol = self.calculer_conflits(self.solution)  # Coût initial
         self.min_sol = self.solution[:]
+        self.iterations = iterations
+        self.voisinages = voisinages
 
     def calculer_conflits(self, solution):
         """
@@ -33,7 +35,7 @@ class RecuitSimule:
         voisin[sommet] = nouvelle_couleur
         return voisin
 
-    def launch(self, iterations=1000, voisinages=50):
+    def launch(self):
         """
         Exécute l'algorithme de recuit simulé.
         """
@@ -41,9 +43,9 @@ class RecuitSimule:
         cout_actuel = self.cout_min_sol
         historique = []
 
-        for i in range(iterations):
+        for _ in range(self.iterations):
             T *= self.facteur
-            for _ in range(voisinages):
+            for _ in range(self.voisinages):
                 nouv_sol = self.voisinage(self.solution)
                 cout_nouveau = self.calculer_conflits(nouv_sol)
                 

@@ -6,6 +6,7 @@ Sujet  :  Coloration de graphes appliquée à la France
 """
 
 # Import libs
+import streamlit as st
 import geopandas as gpd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -30,6 +31,7 @@ class Region:
     def add_neighbor(self, neighbor):
         self.neighbors.append(neighbor)
 
+@st.cache_resource
 class GeoEnv:
     def __init__(self, choice):
         if choice == "departements":
@@ -80,7 +82,7 @@ class GeoEnv:
                     adj_matrix[i, j] = 1
                     adj_matrix[j, i] = 1
         return adj_matrix, region_names
-
+    
     def show_graph(self, colors=None, title="Map"):
         if self.gdf.empty:
             print("Le GeoDataFrame est vide, impossible d'afficher la carte.")
