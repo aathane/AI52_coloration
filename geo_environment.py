@@ -34,13 +34,13 @@ class Region:
 @st.cache_resource
 class GeoEnv:
     def __init__(self, choice):
-        if choice == "departements":
+        if choice == "Départements":
             geojson_path = "data/departements.geojson"
 
             self.gdf = gpd.read_file(geojson_path)
 
             self.gdf = self.gdf[~self.gdf['nom'].isin(DEPARTEMENTS_INTERDITES)]  # Exclure les departements interdits
-        elif choice == "regions":
+        elif choice == "Régions":
             geojson_path = "data/regions.geojson"
 
             self.gdf = gpd.read_file(geojson_path)
@@ -71,7 +71,7 @@ class GeoEnv:
             neighbors = self.gdf[self.gdf.geometry.touches(region.geometry)]['nom'].tolist()
             self.france_graph[region_name] = Region(region_name, NO_COLOR, neighbors)
 
-    def adjacency_matrix(self):
+    def adjacency_matrix(self) -> tuple[np.ndarray, list[str]]:
         region_names = list(self.france_graph.keys())
         size = len(region_names)
         adj_matrix = np.zeros((size, size), dtype=int)
@@ -103,3 +103,4 @@ class GeoEnv:
         ax.set_aspect('auto')  # Nous utilisons 'auto' pour un ajustement dynamique en fonction du contenu
 
         return fig
+ 

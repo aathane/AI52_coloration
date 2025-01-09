@@ -1,0 +1,60 @@
+Algorithm,Map,Computation Time (s),Number of Conflicts
+Recuit simulé,Régions,0.014999151229858398,0
+Recuit simulé,Régions,0.015009641647338867,0
+Recuit simulé,Régions,0.01300191879272461,0
+Recuit simulé,Régions,0.016883373260498047,0
+Recuit simulé,Régions,0.01599860191345215,0
+Recuit simulé,Régions,0.017007827758789062,0
+Recuit simulé,Régions,0.011005163192749023,0
+Recuit simulé,Régions,0.01700448989868164,1
+Recuit simulé,Régions,0.02099466323852539,0
+Recuit simulé,Régions,0.019005298614501953,1
+Algorithme génétique,Régions,0.0210113525390625,0
+Algorithme génétique,Régions,0.012996196746826172,0
+Algorithme génétique,Régions,0.022011280059814453,0
+Algorithme génétique,Régions,0.0530397891998291,0
+Algorithme génétique,Régions,0.03500795364379883,0
+Algorithme génétique,Régions,0.03701019287109375,0
+Algorithme génétique,Régions,0.02700066566467285,0
+Algorithme génétique,Régions,0.024006366729736328,0
+Algorithme génétique,Régions,0.02500748634338379,0
+Algorithme génétique,Régions,0.043007612228393555,0
+Recherche tabou,Régions,0.00613093376159668,0
+Recherche tabou,Régions,0.004978656768798828,0
+Recherche tabou,Régions,0.01800060272216797,0
+Recherche tabou,Régions,0.010001659393310547,0
+Recherche tabou,Régions,0.007001161575317383,0
+Recherche tabou,Régions,0.006874799728393555,0
+Recherche tabou,Régions,0.005999326705932617,0
+Recherche tabou,Régions,0.004997730255126953,0
+Recherche tabou,Régions,0.0069980621337890625,0
+Recherche tabou,Régions,0.005895853042602539,0
+Recuit simulé,Départements,2.006474494934082,14
+Recuit simulé,Départements,1.9074351787567139,9
+Recuit simulé,Départements,1.956613540649414,13
+Recuit simulé,Départements,1.9324827194213867,13
+Recuit simulé,Départements,2.196406841278076,10
+Algorithme génétique,Départements,44.06107473373413,9
+Recherche tabou,Départements,15.842201948165894,3
+ACO,Régions,0.04001474380493164,0
+ACO,Régions,0.004999399185180664,0
+ACO,Régions,0.00497746467590332,0
+ACO,Régions,0.021995067596435547,0
+ACO,Régions,0.05903172492980957,0
+ACO,Régions,0.03200817108154297,0
+ACO,Régions,0.009996891021728516,0
+ACO,Régions,0.018004894256591797,0
+ACO,Régions,0.011879205703735352,0
+ACO,Régions,0.007001638412475586,0
+ACO,Départements,85.70067811012268,13
+PSO,Régions,0.04700946807861328,1
+PSO,Régions,0.030010700225830078,3
+PSO,Régions,0.03800702095031738,5
+PSO,Régions,0.03501152992248535,4
+PSO,Régions,0.03500676155090332,8
+PSO,Régions,0.03600668907165527,11
+PSO,Régions,0.03701043128967285,5
+PSO,Régions,0.03501009941101074,2
+PSO,Régions,0.03300619125366211,1
+PSO,Régions,0.03213143348693848,4
+PSO,Départements,16.212643146514893,43
